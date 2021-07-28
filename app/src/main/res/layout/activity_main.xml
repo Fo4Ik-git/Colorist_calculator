@@ -10,9 +10,9 @@
     <ImageButton
         android:id="@+id/btn_sttings"
         android:layout_width="wrap_content"
-        android:onClick="toSettings"
         android:layout_height="45dp"
         android:layout_marginTop="16dp"
+        android:onClick="toSettings"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/app_name"
         app:layout_constraintTop_toTopOf="parent"
@@ -39,10 +39,10 @@
         android:id="@+id/btn_add_content"
         android:layout_width="226dp"
         android:layout_height="45dp"
-        android:onClick="add_cat"
         android:layout_marginStart="83dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="84dp"
+        android:onClick="add_cat"
         android:text="@string/add_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,9 +51,10 @@
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:layout_marginTop="81dp"
-        android:layout_marginBottom="15dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:orientation="vertical"
+        android:scrollbarSize="100dp"
         app:layout_constraintBottom_toTopOf="@+id/btn_result"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -186,7 +187,7 @@
     <Button
         android:id="@+id/btn_result"
         android:layout_width="199dp"
-        android:layout_height="47dp"
+        android:layout_height="45dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="53dp"
         android:onClick="onCalculate"
@@ -199,10 +200,10 @@
     <Button
         android:id="@+id/btn_clear"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:layout_marginTop="10dp"
-        android:text="@string/clear"
         android:onClick="onClean"
+        android:text="@string/clear"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_result"
         app:layout_constraintTop_toBottomOf="@+id/scrollView" />
@@ -210,23 +211,25 @@
     <ScrollView
         android:id="@+id/scrollView3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:scrollbarSize="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_result"
         tools:ignore="MissingConstraints">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/text_res"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"/>
+                android:layout_height="match_parent"
+                android:textSize="18sp" />
         </LinearLayout>
     </ScrollView>
 
