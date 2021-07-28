@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     <string name="app_name">Калькулятор колориста</string>
+     <string name="add_content">Добавить категорию</string>
+     <string name="surface">Surface</string>
+     <string name="lakme">Lakme</string>
+     <string name="powder">Пудра</string>
+     <string name="oxident">Окислитель</string>
+     <string name="foam_bath">Пенная баня</string>
+     <string name="assets">Активы</string>
+     <string name="time">Время</string>
+     <string name="consumables">Рассходники</string>
+     <string name="calculate">Рассчитать</string>
+     <string name="clear">Очистить</string>
+</resources>
