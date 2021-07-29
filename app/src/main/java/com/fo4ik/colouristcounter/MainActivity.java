@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
         foam_bath = findViewById(R.id.foam_bath);
         text_res = findViewById(R.id.text_res);
 
-        clear = findViewById(R.id.btn_clear);
 
         surface.setText("");
         consumables.setText("");
@@ -131,31 +130,39 @@ public class MainActivity extends AppCompatActivity {
 
             service_cost = material + work;
 
+            createDialogCalc(MainActivity.this, service_cost, profit, asset, own_count, material, work);
 
-            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-            builder.setTitle("Рассчеты")
-                    .setMessage("Стоимость услуги: " + service_cost + "\n" +
-                            "Прибыль: "+ profit + "\n" +
-                            "Активы: "+ asset + "\n" +
-                            "Себе стоимость: " + own_count + "\n" +
-                            "Материалы: "+ material + "\n" +
-                            "Время: "+ work + "\n" +
-                            "")
-                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int id) {
-                            Toast.makeText(MainActivity.this,"Нажата кнопка 'OK'",Toast.LENGTH_SHORT).show();
-                        }
-                    });
+
+        } catch (Exception e) {
+            text_res.setText("Error try again");
+        }
+    }
+
+
+    public void createDialogCalc(Activity activity, float service_cost, float profit, float asset, float own_count, float material, float work){
+
+        String service_cost_string = getResources().getString(R.string.service_cost);
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        builder.setTitle("Рассчеты")
+                .setMessage(service_cost_string+ ": " + service_cost + "\n" +
+                        "Прибыль: "+ profit + "\n" +
+                        "Активы: "+ asset + "\n" +
+                        "Себе стоимость: " + own_count + "\n" +
+                        "Материалы: "+ material + "\n" +
+                        "Время: "+ work + "\n" +
+                        "")
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        //Toast.makeText(MainActivity.this,"Нажата кнопка 'OK'",Toast.LENGTH_SHORT).show();
+                    }
+                });
 //                    .setNegativeButton("Отмена", new DialogInterface.OnClickListener() {
 //                        public void onClick(DialogInterface dialog, int id) {
 //                            Toast.makeText(MainActivity.this,"Нажата кнопка 'Отмена'",Toast.LENGTH_SHORT).show();
 //                        }
 //                    });
-            builder.create().show();
-
-        } catch (Exception e) {
-            text_res.setText("Error try again");
-        }
+        builder.create().show();
     }
 
 

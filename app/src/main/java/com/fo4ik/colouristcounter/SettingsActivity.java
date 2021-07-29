@@ -1,16 +1,14 @@
 package com.fo4ik.colouristcounter;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.CompoundButton;
-import android.widget.Switch;
-import android.widget.Toast;
-import androidx.appcompat.app.ActionBar;
+import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.preference.PreferenceFragmentCompat;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -28,25 +26,68 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
 
-
-
-    public void toMain(View view){
+    public void toMain(View view) {
         Intent intent = new Intent(SettingsActivity.this, MainActivity.class);
         startActivity(intent);
     }
 
     @SuppressLint("ShowToast")
-    public void onDarkTheme(View view){
+    public void onEdit(View view) {
 
-
-        if (getTheme().equals(R.style.Theme_AppCompat_Light_NoActionBar)) {
-            btn_theme.setText("Dark");
-            this.setTheme(R.style.Theme_AppCompat_NoActionBar);
-        } else {
-            btn_theme.setText("Light");
-            this.setTheme(R.style.Theme_AppCompat_Light_NoActionBar);
-        }
+        createEditDialog(SettingsActivity.this);
 
     }
 
+    public void createEditDialog(Activity activity) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+
+
+        String[] s = { "India ", "Arica", "India ", "Arica", "India ", "Arica",
+                "India ", "Arica", "India ", "Arica" };
+
+
+        Spinner spinner = new Spinner(activity);
+        EditText price = new EditText(activity);
+        EditText own_price = new EditText(activity);
+
+        price.setHint("New price");
+        own_price.setHint("New own price");
+
+        final ArrayAdapter<String> adp = new ArrayAdapter<String>(activity,
+                android.R.layout.simple_spinner_item, s);
+        //spinner.setLayoutParams(new LinearLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT));
+        spinner.setAdapter(adp);
+
+
+        String edit_content = getResources().getString(R.string.edit_content);
+
+        LinearLayout container = new LinearLayout(this); // Создание контейнера для добавления нескольких полей
+        container.setOrientation(LinearLayout.VERTICAL);
+        container.addView(spinner);
+        container.addView(new TextView(this));
+        container.addView(price);
+        container.addView(own_price);
+
+
+        builder.setTitle(edit_content)
+                .setMessage("")
+                .setView(container)
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        Toast.makeText(activity,"Временно не работает",Toast.LENGTH_SHORT).show();
+
+                    }
+                })
+                .setNegativeButton("Отмена", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        //Toast.makeText(activity,"Нажата кнопка 'Отмена'",Toast.LENGTH_SHORT).show();
+                    }
+                });
+        builder.create().show();
+    }
+
+    public String[] getMaterials(){
+
+        return null;
+    }
 }

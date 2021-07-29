@@ -12,8 +12,16 @@
     <string name="calculate">Calculate</string>
     <string name="clear">Clear</string>
     <string name="btn_dark_theme">Dark theme</string>
-    <string name="choose_theme">Choose theme</string>
+    <string name="edit_content">Edit content</string>
     <string name="btn_light_theme">Light theme</string>
     <string name="title_activity_settings">Settings</string>
+
+
+<!--    Part for Activity -->
+
+
+    <string name="service_cost">Service cost</string>
+
+
 
 </resources>
