@@ -148,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
                 .setMessage(service_cost_string+ ": " + service_cost + "\n" +
                         "Прибыль: "+ profit + "\n" +
                         "Активы: "+ asset + "\n" +
-                        "Себе стоимость: " + own_count + "\n" +
+                        "Себестоимость: " + own_count + "\n" +
                         "Материалы: "+ material + "\n" +
                         "Время: "+ work + "\n" +
                         "")

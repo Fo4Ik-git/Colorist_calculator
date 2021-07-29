@@ -51,7 +51,9 @@ public class SettingsActivity extends AppCompatActivity {
         EditText own_price = new EditText(activity);
 
         price.setHint("New price");
+        price.setInputType(0x00002002);
         own_price.setHint("New own price");
+        own_price.setInputType(0x00002002);
 
         final ArrayAdapter<String> adp = new ArrayAdapter<String>(activity,
                 android.R.layout.simple_spinner_item, s);
