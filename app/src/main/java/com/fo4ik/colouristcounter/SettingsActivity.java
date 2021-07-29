@@ -13,14 +13,10 @@ import androidx.appcompat.app.AppCompatActivity;
 public class SettingsActivity extends AppCompatActivity {
 
 
-    Button btn_theme;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings_activity);
-
-        btn_theme = findViewById(R.id.btn_theme);
 
 
     }
@@ -31,10 +27,54 @@ public class SettingsActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    @SuppressLint("ShowToast")
-    public void onEdit(View view) {
+    @SuppressLint("NonConstantResourceId")
+    public void onClick(View view) {
 
-        createEditDialog(SettingsActivity.this);
+
+        switch (view.getId()) {
+            case R.id.btn_choose_lang: {
+                createChooseLangDialog(SettingsActivity.this);
+            }
+            break;
+            case R.id.btn_edit_content: {
+                createEditDialog(SettingsActivity.this);
+            }
+            break;
+        }
+
+
+    }
+
+    public void createChooseLangDialog(Activity activity) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+
+        String[] s = {"English ", "Русский"};
+
+        Spinner spinner = new Spinner(activity);
+        final ArrayAdapter<String> adp = new ArrayAdapter<String>(activity,
+                android.R.layout.simple_spinner_item, s);
+        spinner.setAdapter(adp);
+
+
+        LinearLayout container = new LinearLayout(this); // Создание контейнера для добавления нескольких полей
+        container.setOrientation(LinearLayout.VERTICAL);
+        container.addView(spinner);
+
+        builder.setMessage("Choose lang")
+                .setView(container)
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        Toast.makeText(activity, "Временно не работает", Toast.LENGTH_SHORT).show();
+
+                    }
+                })
+                .setNegativeButton("Отмена", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        Toast.makeText(activity, "Временно не работает", Toast.LENGTH_SHORT).show();
+                    }
+                });;
+
+        builder.create().show();
 
     }
 
@@ -42,8 +82,8 @@ public class SettingsActivity extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
 
 
-        String[] s = { "India ", "Arica", "India ", "Arica", "India ", "Arica",
-                "India ", "Arica", "India ", "Arica" };
+        String[] s = {"India ", "Arica", "India ", "Arica", "India ", "Arica",
+                "India ", "Arica", "India ", "Arica"};
 
 
         Spinner spinner = new Spinner(activity);
@@ -57,7 +97,6 @@ public class SettingsActivity extends AppCompatActivity {
 
         final ArrayAdapter<String> adp = new ArrayAdapter<String>(activity,
                 android.R.layout.simple_spinner_item, s);
-        //spinner.setLayoutParams(new LinearLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT));
         spinner.setAdapter(adp);
 
 
@@ -76,7 +115,7 @@ public class SettingsActivity extends AppCompatActivity {
                 .setView(container)
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        Toast.makeText(activity,"Временно не работает",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(activity, "Временно не работает", Toast.LENGTH_SHORT).show();
 
                     }
                 })
@@ -88,7 +127,10 @@ public class SettingsActivity extends AppCompatActivity {
         builder.create().show();
     }
 
-    public String[] getMaterials(){
+
+    //TODO Сделать чтобы Spinner choose_lang выпадал список языков которые есть, и сделать смену их
+
+    public String[] getMaterials() {
 
         return null;
     }

@@ -1,6 +1,5 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -9,9 +8,9 @@
         style="@android:style/Widget.DeviceDefault.ImageButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:onClick="toMain"
-        android:layout_marginTop="5dp"
         android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:onClick="toMain"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_back" />
@@ -28,25 +27,41 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="15dp"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/btn_edit_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:text="@string/edit_content"
+                    android:textSize="15dp" />
+
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-
                 <Button
-                    android:id="@+id/btn_theme"
+                    android:id="@+id/btn_choose_lang"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:onClick="onEdit"
                     android:gravity="center"
-                    android:text="@string/edit_content"
-                    android:textSize="15dp"
-                    />
-
-
+                    android:onClick="onClick"
+                    android:text="@string/choose_lang"
+                    android:textSize="15dp" />
             </LinearLayout>
 
         </LinearLayout>
