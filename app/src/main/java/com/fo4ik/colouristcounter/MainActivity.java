@@ -90,7 +90,6 @@ public class MainActivity extends AppCompatActivity {
         float work = 0;
         float asset = 0;
         float service_cost = 0;
-        float cons = 0;
 
         try {
             if (!surface.getText().toString().equals("")) {
@@ -122,11 +121,11 @@ public class MainActivity extends AppCompatActivity {
                 work = Float.parseFloat(time.getText().toString()) * 600;
             }
             if(!consumables.getText().toString().equals("")){
-               cons = consum(consumables.getText().toString());
+               material = material + (Float.parseFloat(consumables.getText().toString()));
             }
             profit = material - own_count;
 
-            service_cost = material + work + cons;
+            service_cost = material + work;
 
             text_res.setText("Стоимость услуги: " + service_cost + "\n" +
                     "Прибыль: "+ profit + "\n" +
@@ -141,10 +140,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public float consum(String cosum){
-
-        return Float.parseFloat(cosum);
-    }
 
 
 

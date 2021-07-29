@@ -12,4 +12,9 @@
      <string name="consumables">Рассходники</string>
      <string name="calculate">Рассчитать</string>
      <string name="clear">Очистить</string>
+     <string name="btn_dark_theme">Темная тема</string>
+     <string name="btn_light_theme">Светлая тема</string>
+     <string name="choose_theme">Выбери тему</string>
+     <string name="title_activity_settings">Настройки</string>
+
 </resources>
