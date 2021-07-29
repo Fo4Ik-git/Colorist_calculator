@@ -1,5 +1,8 @@
 package com.fo4ik.colouristcounter;
 
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -45,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         surface.setText("");
         consumables.setText("");
         lakme.setText("");
+        oxident.setText("");
         powder.setText("");
         time.setText("");
         assets.setText("");
@@ -127,18 +131,34 @@ public class MainActivity extends AppCompatActivity {
 
             service_cost = material + work;
 
-            text_res.setText("Стоимость услуги: " + service_cost + "\n" +
-                    "Прибыль: "+ profit + "\n" +
-                    "Активы: "+ asset + "\n" +
-                    "Себе стоимость: " + own_count + "\n" +
-                    "Материалы: "+ material + "\n" +
-                    "Время: "+ work + "\n" +
-                    "");
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+            builder.setTitle("Рассчеты")
+                    .setMessage("Стоимость услуги: " + service_cost + "\n" +
+                            "Прибыль: "+ profit + "\n" +
+                            "Активы: "+ asset + "\n" +
+                            "Себе стоимость: " + own_count + "\n" +
+                            "Материалы: "+ material + "\n" +
+                            "Время: "+ work + "\n" +
+                            "")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            Toast.makeText(MainActivity.this,"Нажата кнопка 'OK'",Toast.LENGTH_SHORT).show();
+                        }
+                    });
+//                    .setNegativeButton("Отмена", new DialogInterface.OnClickListener() {
+//                        public void onClick(DialogInterface dialog, int id) {
+//                            Toast.makeText(MainActivity.this,"Нажата кнопка 'Отмена'",Toast.LENGTH_SHORT).show();
+//                        }
+//                    });
+            builder.create().show();
 
         } catch (Exception e) {
             text_res.setText("Error try again");
         }
     }
+
+
 
 
 
