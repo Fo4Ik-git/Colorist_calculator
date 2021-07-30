@@ -7,9 +7,8 @@
      <string name="powder">Пудра</string>
      <string name="oxident">Окислитель</string>
      <string name="foam_bath">Пенная баня</string>
-     <string name="assets">Активы</string>
-     <string name="time">Время</string>
-     <string name="consumables">Рассходники</string>
+    <string name="time">Время</string>
+     <string name="consumables">Расходники</string>
      <string name="calculate">Рассчитать</string>
      <string name="clear">Очистить</string>
      <string name="btn_dark_theme">Темная тема</string>
@@ -23,5 +22,6 @@
 
      <string name="service_cost">Стоимость услуги</string>
     <string name="choose_lang">Выбери язык</string>
+    <string name="assets">Активы</string>
 
 </resources>

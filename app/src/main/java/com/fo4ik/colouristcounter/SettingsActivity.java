@@ -99,7 +99,6 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
 
-    //TODO Сделать чтобы Spinner choose_lang выпадал список языков которые есть, и сделать смену их
 
     public String[] getMaterials() {
 
