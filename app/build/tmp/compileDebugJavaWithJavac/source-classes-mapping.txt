@@ -1,0 +1,18 @@
+com/fo4ik/colouristcounter/db/DBManager.java
+ com.fo4ik.colouristcounter.db.DBManager
+com/fo4ik/colouristcounter/db/DBContent.java
+ com.fo4ik.colouristcounter.db.DBContent
+com/fo4ik/colouristcounter/Language.java
+ com.fo4ik.colouristcounter.Language
+ com.fo4ik.colouristcounter.Language$1
+com/fo4ik/colouristcounter/MainActivity.java
+ com.fo4ik.colouristcounter.MainActivity
+ com.fo4ik.colouristcounter.MainActivity$1
+com/fo4ik/colouristcounter/BuildConfig.java
+ com.fo4ik.colouristcounter.BuildConfig
+com/fo4ik/colouristcounter/SettingsActivity.java
+ com.fo4ik.colouristcounter.SettingsActivity
+ com.fo4ik.colouristcounter.SettingsActivity$1
+ com.fo4ik.colouristcounter.SettingsActivity$2
+com/fo4ik/colouristcounter/db/DBHelper.java
+ com.fo4ik.colouristcounter.db.DBHelper

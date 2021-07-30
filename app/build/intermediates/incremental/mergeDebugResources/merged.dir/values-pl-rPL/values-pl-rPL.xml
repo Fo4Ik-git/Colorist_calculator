@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="add_content">Dodać kontent</string>
+    <string name="app_name">Сolorist calculator</string>
+    <string name="assets">Aktywa</string>
+    <string name="calculate">Obliczyc</string>
+    <string name="clear">Clear</string>
+    <string name="consumables">Materiały eksploatacyjne</string>
+    <string name="foam_bath">Kąpiel z bąbelkami</string>
+    <string name="lakme">Lakme</string>
+    <string name="oxident">Środek utleniający</string>
+    <string name="powder">Proszek</string>
+    <string name="surface">Surface</string>
+    <string name="time">Czas</string>
+</resources>

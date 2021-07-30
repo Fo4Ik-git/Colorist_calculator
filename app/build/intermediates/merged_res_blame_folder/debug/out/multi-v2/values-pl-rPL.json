@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\terra\\IntelliJIDEAProjects\\Colouristcounter\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pl-rPL\\values-pl-rPL.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\terra\\IntelliJIDEAProjects\\Colouristcounter\\app\\src\\main\\res\\values-pl-rPL\\strings.xml",
+                    "from": {
+                        "startLines": "3,2,11,7,13,12,10,5,9,8,4,6",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "115,57,501,295,610,544,443,215,387,343,170,256",
+                        "endColumns": "53,56,41,46,39,64,56,39,54,42,43,37",
+                        "endOffsets": "164,109,538,337,645,604,495,250,437,381,209,289"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,109,166,208,255,295,360,417,457,512,555,599",
+                        "endColumns": "53,56,41,46,39,64,56,39,54,42,43,37",
+                        "endOffsets": "104,161,203,250,290,355,412,452,507,550,594,632"
+                    }
+                }
+            ]
+        }
+    ]
+}
