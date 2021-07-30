@@ -22,5 +22,6 @@
 
 
      <string name="service_cost">Стоимость услуги</string>
+    <string name="choose_lang">Выбери язык</string>
 
 </resources>

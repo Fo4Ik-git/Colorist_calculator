@@ -4,12 +4,13 @@
     android:layout_height="match_parent">
 
     <ImageButton
-        android:id="@+id/btn_back"
+        android:id="@+id/btnBack"
         style="@android:style/Widget.DeviceDefault.ImageButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
+
         android:onClick="toMain"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -38,7 +39,7 @@
 
 
                 <Button
-                    android:id="@+id/btn_edit_content"
+                    android:id="@+id/btnEditContent"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -55,13 +56,14 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btn_choose_lang"
-                    android:layout_width="match_parent"
+                    android:id="@+id/btnChooseLang"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:onClick="onClick"
                     android:text="@string/choose_lang"
                     android:textSize="15dp" />
+
             </LinearLayout>
 
         </LinearLayout>

@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
+import com.fo4ik.colouristcounter.db.DBHelper;
 
 public class MainActivity extends AppCompatActivity {
 

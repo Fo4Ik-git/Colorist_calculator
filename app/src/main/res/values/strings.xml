@@ -18,11 +18,10 @@
     <string name="choose_lang">Choose lang</string>
 
 
-<!--    Part for Activity -->
+    <!--    Part for Activity -->
 
 
     <string name="service_cost">Service cost</string>
-
 
 
 </resources>

@@ -13,6 +13,8 @@ import androidx.appcompat.app.AppCompatActivity;
 public class SettingsActivity extends AppCompatActivity {
 
 
+    Spinner lang;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,49 +34,18 @@ public class SettingsActivity extends AppCompatActivity {
 
 
         switch (view.getId()) {
-            case R.id.btn_choose_lang: {
-                createChooseLangDialog(SettingsActivity.this);
+            case R.id.btnChooseLang: {
+                Intent intent = new Intent(this, Language.class);
+                startActivity(intent);
+
             }
             break;
-            case R.id.btn_edit_content: {
+            case R.id.btnEditContent: {
                 createEditDialog(SettingsActivity.this);
             }
             break;
         }
 
-
-    }
-
-    public void createChooseLangDialog(Activity activity) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(activity);
-
-        String[] s = {"English ", "Русский"};
-
-        Spinner spinner = new Spinner(activity);
-        final ArrayAdapter<String> adp = new ArrayAdapter<String>(activity,
-                android.R.layout.simple_spinner_item, s);
-        spinner.setAdapter(adp);
-
-
-        LinearLayout container = new LinearLayout(this); // Создание контейнера для добавления нескольких полей
-        container.setOrientation(LinearLayout.VERTICAL);
-        container.addView(spinner);
-
-        builder.setMessage("Choose lang")
-                .setView(container)
-                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        Toast.makeText(activity, "Временно не работает", Toast.LENGTH_SHORT).show();
-
-                    }
-                })
-                .setNegativeButton("Отмена", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        Toast.makeText(activity, "Временно не работает", Toast.LENGTH_SHORT).show();
-                    }
-                });;
-
-        builder.create().show();
 
     }
 
@@ -107,7 +78,7 @@ public class SettingsActivity extends AppCompatActivity {
         container.addView(spinner);
         container.addView(new TextView(this));
         container.addView(price);
-        container.addView(own_price);
+        //container.addView(own_price);
 
 
         builder.setTitle(edit_content)
