@@ -2,14 +2,9 @@
 <resources>
      <string name="app_name">Калькулятор колориста</string>
      <string name="add_content">Добавить категорию</string>
-     <string name="surface">Surface</string>
-     <string name="lakme">Lakme</string>
-     <string name="powder">Пудра</string>
-     <string name="oxident">Окислитель</string>
-     <string name="foam_bath">Пенная баня</string>
+    <string name="oxident">Окислитель</string>
     <string name="time">Время</string>
-     <string name="consumables">Расходники</string>
-     <string name="calculate">Рассчитать</string>
+    <string name="calculate">Рассчитать</string>
      <string name="clear">Очистить</string>
      <string name="btn_dark_theme">Темная тема</string>
      <string name="btn_light_theme">Светлая тема</string>
@@ -23,5 +18,9 @@
      <string name="service_cost">Стоимость услуги</string>
     <string name="choose_lang">Выбери язык</string>
     <string name="assets">Активы</string>
+    <string name="cancel">Отмена</string>
+    <string name="error_empty_input">Ошибка, заполните все поля</string>
+    <string name="new_own_price">Введине новую себестоиость</string>
+    <string name="new_price">Введите новую стоимость</string>
 
 </resources>
